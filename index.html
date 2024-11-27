@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Estratégicas para Redes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    p {
+      color: #555;
+      text-align: center;
+    }
+    .form-tool {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .cta h3 {
+      color: #180E3C;
+      margin-bottom: 10px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #00CE5D;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background-color: #009E49;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Preguntas Estratégicas para Redes</h1>
+    <p>Diseña preguntas irresistibles que multipliquen la interacción en tus publicaciones.</p>
+
+    <div class="form-tool">
+      <form id="questionForm">
+        <label for="theme">Tema de tu publicación:</label>
+        <input type="text" id="theme" placeholder="Ejemplo: Motivación, productividad, entretenimiento" required>
+
+        <label for="audience">Interés principal de tu audiencia:</label>
+        <textarea id="audience" placeholder="Ejemplo: Mejorar su productividad, aprender algo nuevo" rows="2"></textarea>
+
+        <label for="goal">Objetivo de tu publicación:</label>
+        <textarea id="goal" placeholder="Ejemplo: Generar comentarios, inspirar respuestas rápidas" rows="2" required></textarea>
+
+        <button type="button" onclick="generateQuestions()">Generar Preguntas</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <div class="cta">
+      <h3>¿CAMPO DE JUEGO O MINA DE ORO?</h3>
+      <a href="https://klicana.work/ykEi0H">SÍ, QUIERO INSCRIBIRME EN MISIÓN GESTOR RRSS</a>
+    </div>
+  </div>
+
+  <script>
+    function generateQuestions() {
+      const theme = document.getElementById('theme').value;
+      const audience = document.getElementById('audience').value;
+      const goal = document.getElementById('goal').value;
+
+      if (!theme || !goal) {
+        document.getElementById('result').innerHTML = '<span style="color: red;">Por favor, completa los campos requeridos.</span>';
+        return;
+      }
+
+      document.getElementById('result').innerHTML = `
+        <h3>Tus preguntas estratégicas:</h3>
+        <ul>
+          <li><strong>Pregunta 1:</strong> ¿Cuál ha sido tu mayor logro relacionado con ${theme}?</li>
+          <li><strong>Pregunta 2:</strong> Si pudieras cambiar algo sobre ${theme}, ¿qué sería?</li>
+          <li><strong>Pregunta 3:</strong> ¿Qué consejo le darías a alguien que quiere mejorar en ${theme}?</li>
+        </ul>
+        <p>Usa estas preguntas para generar conversaciones auténticas y aumentar la interacción en tus publicaciones.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
